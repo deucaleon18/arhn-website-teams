@@ -220,17 +220,28 @@ td,
 th {
     padding: 0
 }
-
 /* ==========================================================================
    Start of base Webflow CSS - If you're looking for some ultra-clean CSS, skip the boilerplate and see the unminified code below.
    ========================================================================== */
-
 @font-face {
     font-family: 'webflow-icons';
     src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format('truetype');
     font-weight: normal;
     font-style: normal
 }
+
+.overlay{
+    z-index:-1;
+    position:fixed;
+    top:0;
+    right:0;
+    min-width:100%;
+    min-height:100%; 
+    height:auto;
+    width:auto; 
+     background-color:black;
+    opacity: 0.7;
+} 
 
 [class^="w-icon-"],
 [class*=" w-icon-"] {
@@ -301,17 +312,28 @@ html.w-mod-touch * {
 }
 
 .video-bg{
+    object-fit: cover;
+    height:100vh;
     z-index:-200;
-    position:absolute;
-    /* top:0;
-    right:0; */
-    left:0;
-    bottom:0;
-    min-width:100%; 
-    min-height:100%; 
-    height: auto;
-   width:auto;
+    position:fixed;
+    top:0;
+    right:0;
+   
 }
+@media screen and (min-width:1600px){
+    .video-bg{
+        object-fit: cover;
+        width:100vw;
+        z-index:-200;
+        position:fixed;
+        top:0;
+        right:0;
+       
+    }
+}
+
+
+
 
 .w-block {
     display: block
@@ -929,7 +951,16 @@ textarea.w-select {
     display: none !important
 }
 
+ /* @media screen and (max-width:1280px) {
+    .video-bg{
+        display: none;
+    }
+}  */
+
 @media screen and (max-width:991px) {
+   /* .video-bg{
+       display: none;
+   } */
     .w-container {
         max-width: 728px
     }
@@ -1042,9 +1073,9 @@ textarea.w-select {
 
 @media screen and (max-width:479px) {
 
-    .video-bg{
-       display: none;
-    }
+
+
+    
     .w-container {
         max-width: none
     }
@@ -1533,6 +1564,7 @@ textarea.w-select {
 }
 
 @media screen and (max-width:767px) {
+    
     .w-nav-brand {
         padding-left: 10px
     }
@@ -1789,6 +1821,7 @@ textarea.w-select {
 }
 
 @media (min-width:768px) {
+ 
     .w-lightbox-content {
         height: 96vh;
         margin-top: 2vh
@@ -2123,6 +2156,10 @@ textarea.w-select {
 }
 
 @media screen and (max-width:991px) {
+
+
+
+    
     .w-nav[data-collapse="medium"] .w-nav-menu {
         display: none
     }
@@ -2364,16 +2401,11 @@ blockquote {
 .container {
     position: relative;
     z-index: 1;
-    /* overflow: visible; */
-    /* width: 1440px; */
     height:180%;
-    max-width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
     padding: 0em 10em 10em;
     -o-object-fit: fill;
-    /* object-fit: fill; */
-    /* overflow-y: scroll; */
+   
 }
 
 .container.ann-bar {
@@ -2488,12 +2520,15 @@ blockquote {
     align-items: center;
 }
 
+
+/* tag */
 .container.is--game-p {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 15em;
+    padding-top: 17em;
+   
 }
 
 .container.is--cta {
@@ -2518,27 +2553,16 @@ blockquote {
     align-items: center;
 }
 
-.container.is--roadmap {
-    padding-bottom: 0em;
-}
 
+/* tag */
 .container.is--team {
+    z-index:999;
     width:100%;
     padding-top: 5.9em;
-    padding-bottom: 3em;
+    padding-bottom: 4em;
     overflow-x:hidden;
 }
 
-.container.is--footer {
-    padding-top: 0em;
-    padding-bottom: 5em;
-}
-
-.container.is--hero2 {
-    min-height: 800px;
-    padding-top: 15em;
-    padding-bottom: 2em;
-}
 
 .container.is--block {
     min-height: 800px;
@@ -4518,7 +4542,7 @@ blockquote {
 .game-p_close-x {
     position: absolute;
     left: auto;
-    top: 10em;
+    top: 2em;
     right: 10em;
     bottom: auto;
     z-index: 999;
@@ -7381,16 +7405,32 @@ blockquote {
 }
 
 @media screen and (max-width: 991px) {
+    
+.team_list {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 5em;
+    grid-row-gap: 3em;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    /* overflow-y: scroll; */
+}
+
     body {
         font-size: 12px;
     }
     p {
         font-size: 13px;
     }
+
+    /* tag */
     .container {
         overflow-y: scroll;
-        padding-right: 3em;
-        padding-left: 3em;
+        padding-right: 2em;
+        padding-left: 2em;
     }
     .container.is--nav {
         -webkit-box-pack: justify;
@@ -8093,6 +8133,8 @@ blockquote {
 }
 
 @media screen and (max-width: 767px) {
+
+
     .container.ann-bar {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -8510,7 +8552,58 @@ blockquote {
     }
 }
 
+@media screen and (min-width: 912px) {
+    .container.is--game-p {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-top: 25em;
+    } 
+
+
+}
+
+@media screen and (min-width: 540px) and (max-width:767px){
+    .container.is--game-p {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-top: 5em;
+    } 
+
+
+}
+@media screen and (min-width: 1024px) and (max-width:1280px){
+    .container.is--game-p {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-top: 8em;
+    } 
+
+
+}
 @media screen and (max-width: 479px) {
+    
+    .container.is--game-p {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-top: 8em;
+    } 
+
+
+    .container.is--team {
+        width:100%;
+        padding-top:2em;
+        padding-bottom: 3em;
+        overflow-x:hidden;
+    }
+
     .container.ann-bar {
         padding-right: 1em;
         padding-left: 1em;
@@ -9092,7 +9185,17 @@ blockquote {
     align-self: center;
 }
 
+
+
 @media screen and (max-width: 991px) {
+   
+    .game-p_close-x {
+        left: auto;
+        top: 0em;
+        right: 0%;
+        bottom: auto;
+    }
+   
     #w-node-feb81945-bdf4-f5de-6e7e-92910cb096f7-0cb096f4 {
         -ms-grid-column: span 8;
         grid-column-start: span 8;
@@ -9132,6 +9235,8 @@ blockquote {
 }
 
 @media screen and (max-width: 767px) {
+
+
     #w-node-feb81945-bdf4-f5de-6e7e-92910cb096f7-0cb096f4 {
         -ms-grid-column: span 6;
         grid-column-start: span 6;
@@ -9147,6 +9252,8 @@ blockquote {
 }
 
 @media screen and (max-width: 479px) {
+   
+
     #w-node-feb81945-bdf4-f5de-6e7e-92910cb096f7-0cb096f4 {
         -ms-grid-column: span 4;
         grid-column-start: span 4;
@@ -9172,6 +9279,8 @@ blockquote {
         grid-column-end: span 4;
     }
 }
+
+
 
 @font-face {
     font-family: 'Punta flat';
