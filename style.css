@@ -229,7 +229,10 @@ th {
     font-weight: normal;
     font-style: normal
 }
-
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 .overlay{
     z-index:-1;
     position:fixed;
@@ -1012,8 +1015,21 @@ textarea.w-select {
         right: auto
     }
 }
+@media screen and (min-width) and (max-width:767px){
+    .container.is--team {
+        width: 100%;
+        padding-top: 20em;
+        padding-bottom: 8em;
+        overflow-x: hidden;
+    }
+}
+
+
 
 @media screen and (max-width:767px) {
+
+   
+
     .w-hidden-main {
         display: inherit !important
     }
@@ -2397,13 +2413,14 @@ blockquote {
     font-size: 140%;
     line-height: 1.6;
 }
-
+/* key */
 .container {
     position: relative;
+    overflow-y: scroll;
     z-index: 1;
-    height:180%;
+    height:160%;
     width: 100%;
-    padding: 0em 10em 10em;
+    padding: 0em 5em 5em;
     -o-object-fit: fill;
    
 }
@@ -2527,7 +2544,7 @@ blockquote {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 17em;
+    
    
 }
 
@@ -2555,13 +2572,13 @@ blockquote {
 
 
 /* tag */
-.container.is--team {
+/* .container.is--team {
     z-index:999;
     width:100%;
     padding-top: 5.9em;
     padding-bottom: 4em;
     overflow-x:hidden;
-}
+} */
 
 
 .container.is--block {
@@ -3036,31 +3053,6 @@ blockquote {
     margin-right: 1em;
     margin-left: 1em;
     padding-bottom: 1em;
-}
-
-.preloader {
-    position: fixed;
-    left: 0%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    z-index: 9999999999;
-    display: none;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    grid-auto-columns: 1fr;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto auto;
-    grid-template-rows: auto auto;
-    /* background-color: #000; */
-    color: #1c2230;
 }
 
 .preloader_img--wrap {
@@ -3908,21 +3900,7 @@ blockquote {
     filter: brightness(147%);
 }
 
-.what_cards--wrap {
-    display: -ms-grid;
-    display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    grid-auto-columns: 1fr;
-    grid-column-gap: 3em;
-    grid-row-gap: 16px;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
-}
+
 
 .what_content--wrap {
     display: -webkit-box;
@@ -4143,54 +4121,8 @@ blockquote {
     text-align: center;
 }
 
-.stats_line--wrap {
-    display: -ms-grid;
-    display: grid;
-    width: 100%;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    grid-auto-columns: 1fr;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
-}
 
-.stats_content--wrap {
-    display: -ms-grid;
-    display: grid;
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    grid-auto-columns: 1fr;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
-    text-align: center;
-}
 
-.stats_line--box {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
 
 .stats_lottie {
     width: 2.2em;
@@ -4390,6 +4322,7 @@ blockquote {
 }
 
 .game_caracter {
+    cursor:pointer;
     position: relative;
     max-height: 50%;
     max-width: 70%;
@@ -4416,6 +4349,7 @@ blockquote {
 }
 
 .game_info--wrap {
+    cursor:pointer;
     width: 100%;
     margin-top: 2em;
     text-align: center;
@@ -4542,8 +4476,8 @@ blockquote {
 .game-p_close-x {
     position: absolute;
     left: auto;
-    top: 2em;
-    right: 10em;
+    top: 0em;
+    right: 0em;
     bottom: auto;
     z-index: 999;
     padding: 1.8em;
@@ -4940,14 +4874,6 @@ blockquote {
     align-items: center;
 }
 
-.pagination_item {
-    display: inline-block;
-    grid-auto-columns: 1fr;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto auto;
-    grid-template-rows: auto auto;
-}
 
 .splide__arrow {
     width: 4em;
@@ -5189,14 +5115,12 @@ blockquote {
 .team_list {
     display: -ms-grid;
     display: grid;
-    grid-auto-columns: 1fr;
     grid-column-gap: 5em;
     grid-row-gap: 3em;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
     -ms-grid-rows: auto;
     grid-template-rows: auto;
-    /* overflow-y: scroll; */
+   
 }
 
 .team_item {
@@ -7409,11 +7333,9 @@ blockquote {
 .team_list {
     display: -ms-grid;
     display: grid;
-    grid-auto-columns: 1fr;
     grid-column-gap: 5em;
     grid-row-gap: 3em;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
     -ms-grid-rows: auto;
     grid-template-rows: auto;
     /* overflow-y: scroll; */
@@ -7912,23 +7834,7 @@ blockquote {
         margin-right: 10px;
         margin-left: 10px;
     }
-    .footer_grid {
-        width: 100%;
-        max-width: 738px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        grid-column-gap: 24px;
-        grid-row-gap: 30px;
-        -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
+   
     .footer5-right-column {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -8360,9 +8266,9 @@ blockquote {
         display: none;
     }
     .team_list {
-        -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        /* overflow-y: scroll; */
+        /* -ms-grid-columns: 1fr 1fr; */
+        grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+  
     }
     .invest_list {
         -ms-grid-columns: 1fr 1fr;
@@ -8558,7 +8464,7 @@ blockquote {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        padding-top: 25em;
+      
     } 
 
 
@@ -8593,7 +8499,7 @@ blockquote {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        padding-top: 3em;
+        
     } 
 
 
@@ -8601,17 +8507,19 @@ blockquote {
 
 
 @media screen and (min-width: 1024px) and (max-width:1280px){
-
+     
+    /* key */
     .container {
         position: relative;
         z-index: 1;
-        height: 180%;
+       
         width: 150%;
-        padding: 0em 10em 10em;
+        /* padding: 0em 10em 10em; */
     }
     .game-p_close-x {
         left: auto;
-        top: 1em;
+        top: 0em;
+        right: 0em;
         right: 0%;
         bottom: auto;
     }
@@ -8621,7 +8529,7 @@ blockquote {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        padding-top: 8em;
+        
     } 
 
 
@@ -8635,22 +8543,19 @@ blockquote {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        padding-top: 11em;
+        
     } 
 }
-
 
 
 @media screen and (max-width: 479px) {
     
  
-
-
     .container.is--team {
-        width:100%;
-        padding-top:2em;
-        padding-bottom: 3em;
-        overflow-x:hidden;
+        width: 100%;
+        padding-top: 18em;
+        padding-bottom: 8em;
+        overflow-x: hidden;
     }
 
     .container.ann-bar {
@@ -8893,8 +8798,9 @@ blockquote {
     }
     .game-p_close-x {
         left: auto;
-        top: 2em;
-        right: 0%;
+        top: 0em;
+    right: 0em;
+        
         bottom: auto;
     }
     .game_subhead {
@@ -8902,6 +8808,11 @@ blockquote {
     }
     .cta_text--wrap {
         margin-bottom: 2em;
+    }
+    .container {
+        overflow-y: scroll;
+        padding-right: 2em;
+        padding-left: 2em;
     }
     .cta_img {
         top: 0px;
@@ -8936,9 +8847,9 @@ blockquote {
         margin-top: 4em;
     }
     .team_list {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        /* overflow-y: scroll; */
+        /* -ms-grid-columns: 1fr; */
+        grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+        
     }
     .hero_double--wrap {
         margin-top: 22.8em;
@@ -9237,7 +9148,13 @@ blockquote {
 
 
 @media screen and (max-width: 991px) {
-   
+    /* .container.is--team {
+        width: 100%;
+        padding-top: 13em;
+        padding-bottom: 8em;
+        overflow-x: hidden;
+    } */
+    
     .game-p_close-x {
         left: auto;
         top: 0em;
@@ -9282,6 +9199,41 @@ blockquote {
         align-self: center;
     }
 }
+
+@media screen and (min-width:479px) and (max-width: 767px) {
+    .container.is--team {
+        width: 100%;
+        padding-top: 12em;
+        padding-bottom: 8em;
+        overflow-x: hidden;
+    }
+}
+@media screen and (min-width:767px) and (max-width: 990px) {
+    .container.is--team {
+        width: 100%;
+        padding-top: 200px;
+        padding-bottom: 8em;
+        overflow-x: hidden;
+    }
+}
+@media screen and (min-width:991px){
+    .container.is--team {
+        width: 100%;
+        padding-top:250px;
+        padding-bottom: 8em;
+        overflow-x: hidden;
+    }
+}
+@media screen and (min-width:1300px){
+    .container.is--team {
+        width: 100%;
+        padding-top:125px;
+        padding-bottom: 8em;
+        overflow-x: hidden;
+    }
+}
+
+
 
 @media screen and (max-width: 767px) {
 
